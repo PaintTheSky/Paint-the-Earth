@@ -49,13 +49,13 @@ function Update () {
 		directionVector = directionVector * directionLength;
 	}
 	
-	DirectionString = getDirectionString(Direction);
+	DirectionString = GetDirectionString(Direction);
 	// Apply the direction to the CharacterMotor
 	motor.inputMoveDirection = transform.rotation * directionVector;
 	motor.inputJump = Input.GetButton("Jump");
 }
 
-public function getDirectionString(dir: int){
+public function GetDirectionString(dir: int){
 	switch(dir){
 		case 0:
 			return "North";
